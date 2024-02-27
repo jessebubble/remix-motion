@@ -1,6 +1,9 @@
 import type { MetaFunction } from "@remix-run/node";
 import { PageIntro } from "~/components/PageIntro";
-
+import { AnimationSVG } from "~/components/Examples/AnimationSVG";
+import { UseAnimateStagger } from "~/components/Examples/UseAnimate"
+import { AnimateGrid } from "~/components/Examples/AnimateGrid";
+import { MotionTBA } from "~/components/Examples/TBA";
 
 export const meta: MetaFunction = () => {
   return [
@@ -13,16 +16,19 @@ export default function Index() {
   return (
     <>
       <PageIntro
-        eyebrow="Framer-Motion"
+        eyebrow="Remix + Framer-Motion"
         title="Remix-Motion"
         centered
       >
         <p>
-          This is a Remix app with Framer Motion animations. Check out the
-          <a href="https://remix.run">Remix documentation</a> to learn more.
+          The synergy between Remix and Framer-Motion stems from their shared ability to utilize identical components and logic on both the server and client side
         </p>
       </PageIntro>
 
+      <AnimationSVG />
+      <AnimateGrid />
+      <UseAnimateStagger />
+      <MotionTBA />
     </>
   );
 }
